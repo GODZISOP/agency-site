@@ -1,3 +1,4 @@
+"use client";
 import styles from './Contact.module.css';
 import GSAPWrapper from '@/components/GSAPWrapper';
 
