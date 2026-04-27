@@ -1,0 +1,46 @@
+/* ── Blog skeleton card ── */
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2.5rem;
+  padding: 60px 0;
+}
+
+.skeletonCard {
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);
+}
+
+.skeletonImage {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.skeletonContent {
+  padding: 1.75rem;
+}
+
+.skeletonLine {
+  height: 14px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  margin-bottom: 0.85rem;
+}
+
+.skeletonLine:nth-child(1) { width: 40%; }
+.skeletonLine:nth-child(2) { width: 100%; height: 20px; }
+.skeletonLine:nth-child(3) { width: 75%; }
+.skeletonLine:nth-child(4) { width: 30%; margin-top: 1rem; }
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

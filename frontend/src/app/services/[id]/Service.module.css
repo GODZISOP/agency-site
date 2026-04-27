@@ -1,0 +1,199 @@
+.servicePage {
+  /* padding-top moved to allow hero to hit top of screen */
+}
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.4) 100%);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  padding-top: 100px; /* Offset for navbar */
+}
+
+.tagline {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.headline {
+  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  line-height: 1.1;
+  color: var(--secondary);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  max-width: 900px;
+}
+
+.description {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--text-dim);
+  max-width: 750px;
+  line-height: 1.7;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.statBadge {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+}
+
+/* Sub-Services */
+.sectionTitle {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  color: var(--secondary);
+}
+
+.subServicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.subImageWrapper {
+  position: relative;
+  width: 100%;
+  height: clamp(200px, 40vw, 250px);
+}
+
+.subContent {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.subTitle {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  margin-bottom: 1.2rem;
+  color: var(--primary);
+}
+
+.subList li {
+  margin-bottom: 0.8rem;
+  color: var(--text-dim);
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.subList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+/* Pillars & Stats */
+.pillarsSection {
+  background: var(--bg-offset);
+  border-radius: clamp(25px, 5vw, 50px);
+  margin: clamp(30px, 8vw, 50px) 0;
+  overflow: hidden;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.statsImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(300px, 60vw, 600px);
+  border-radius: clamp(20px, 4vw, 40px);
+  overflow: hidden;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  margin-top: 2rem;
+}
+
+.pillarCard {
+  background: white;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  transition: var(--transition);
+}
+
+.pillarCard:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+}
+
+.pillarNumber {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  opacity: 0.5;
+}
+
+.pillarCard p {
+  font-weight: 600;
+  color: var(--secondary);
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+/* CTA */
+.ctaBox {
+  background: var(--secondary);
+  color: white;
+  padding: clamp(3rem, 10vw, 6rem) clamp(1.5rem, 5vw, 3rem);
+  border-radius: clamp(25px, 5vw, 40px);
+  text-align: center;
+}
+
+.ctaBox h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .statsGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 992px) {
+  .heroOverlay { background: rgba(255, 255, 255, 0.9); }
+}
+
+@media (max-width: 576px) {
+  .pillarsGrid { grid-template-columns: 1fr; }
+}

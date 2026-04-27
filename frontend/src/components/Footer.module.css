@@ -1,0 +1,86 @@
+.footer {
+  background: var(--bg-offset);
+  padding: clamp(60px, 10vh, 100px) 0 clamp(30px, 5vh, 50px);
+  border-top: 1px solid var(--glass-border);
+  margin-top: clamp(80px, 15vh, 120px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  margin-bottom: clamp(40px, 8vh, 80px);
+}
+
+.logo {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  color: var(--secondary);
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.brand p {
+  color: var(--text-dim);
+  max-width: 450px;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.links ul li {
+  margin-bottom: 0.8rem;
+}
+
+.links a {
+  color: var(--text-dim);
+  transition: var(--transition);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.links a:hover {
+  color: var(--primary);
+  transform: translateX(8px);
+  display: inline-block;
+}
+
+.contact p {
+  color: var(--text-dim);
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.bottom {
+  text-align: center;
+  padding-top: clamp(30px, 5vh, 50px);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .brand { grid-column: span 2; margin-bottom: 2rem; }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .brand { grid-column: span 1; }
+}

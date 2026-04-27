@@ -1,0 +1,90 @@
+.faqsPage {
+  padding-top: 100px;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto clamp(50px, 10vh, 100px);
+}
+
+.tagline {
+  color: var(--primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(2.2rem, 8vw, 4rem);
+  margin-bottom: 2rem;
+  color: var(--secondary);
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-dim);
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 450px), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.faqCard {
+  background: var(--bg-offset);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: 25px;
+  border: 1px solid var(--glass-border);
+  transition: var(--transition);
+}
+
+.faqCard:hover {
+  background: white;
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+}
+
+.question {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  margin-bottom: 1.2rem;
+  color: var(--secondary);
+  line-height: 1.3;
+}
+
+.answer {
+  color: var(--text-dim);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.contactSection {
+  margin-top: 50px;
+}
+
+.contactBox {
+  background: var(--secondary);
+  color: white;
+  padding: clamp(3rem, 10vw, 6rem) clamp(1.5rem, 5vw, 3rem);
+  border-radius: clamp(25px, 5vw, 40px);
+  text-align: center;
+}
+
+.contactBox h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+.contactBox p {
+  margin-bottom: 3rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .header { margin-bottom: 40px; }
+}
