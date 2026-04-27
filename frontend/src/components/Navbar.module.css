@@ -231,23 +231,30 @@
 
   .dropdown {
     padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .dropdownMenu {
     position: static;
-    transform: none;
+    transform: none !important;
     left: auto;
     width: 100%;
     opacity: 1;
     visibility: visible;
     box-shadow: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: 0.4s ease-in-out;
     border: none;
     background: transparent;
+    border-radius: 0;
   }
 
   .dropdownOpen .dropdownMenu {
@@ -255,6 +262,11 @@
     margin-top: 0.5rem;
     opacity: 1;
     visibility: visible;
+  }
+
+  .dropdownList {
+    width: 100%;
+    align-items: center;
   }
 
   .dropdownToggle {
@@ -270,10 +282,22 @@
     color: var(--primary);
   }
 
+  .dropdownItem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .dropdownLink {
     text-align: center;
     font-size: 1.1rem;
     padding: 0.8rem;
+    width: 100%;
+    transform: none !important;
+  }
+
+  .dropdownLink:hover {
+    transform: none !important;
   }
 
   .dropdownFeatured {
