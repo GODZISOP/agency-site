@@ -90,6 +90,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .dropdownItem {
@@ -233,11 +236,12 @@
   .dropdownMenu {
     position: static;
     transform: none;
+    left: auto;
     width: 100%;
     opacity: 1;
     visibility: visible;
     box-shadow: none;
-    grid-template-columns: 1fr;
+    display: block;
     padding: 0;
     max-height: 0;
     overflow: hidden;
