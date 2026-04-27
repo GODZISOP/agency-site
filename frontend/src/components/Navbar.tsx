@@ -27,6 +27,7 @@ export default function Navbar() {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      setActiveDropdown(null);
     }
   }, [isMenuOpen]);
 
