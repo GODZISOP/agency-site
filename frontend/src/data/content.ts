@@ -390,24 +390,28 @@ export const blogPosts = [
     title: 'Get The Most Out Of The Creativity',
     date: 'January 10, 2024',
     url: 'get-the-most-out-og-the-creativity',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80',
     comments: 0
   },
   {
     title: 'SEO: Which Digital Advertising Strategy Is Right For You?',
     date: 'January 10, 2024',
     url: 'seo-which-digital-advertis-ing-strategy-is-right-for-you',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
     comments: 0
   },
   {
     title: 'Influencer Marketing Trends 2023: What You Need Know',
     date: 'January 10, 2024',
     url: 'influencer-marketing-trends-2023-what-you-need-know',
+    image: 'https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&q=80',
     comments: 0
   },
   {
     title: 'Social Media Marketing Strategies For Small Business',
     date: 'January 10, 2024',
     url: 'social-media-marketing-strategies-for-small-business',
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80',
     comments: 0
   }
 ];
